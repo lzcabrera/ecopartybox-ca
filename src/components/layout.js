@@ -10,7 +10,9 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Image from "./image"
 import "./layout.css"
+import "./qbpb-layout.css"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -19,29 +21,36 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            menuLinks {
+              name
+              link
+            }
           }
         }
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+      <div id="main-wrapper">
+        <div className="content">
+          <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
+          <main>
+            {children}
+          </main>
         </div>
-      </>
+        <footer className="footer">
+          <div style={{textAlign: `center`}}>
+            <small>
+              <div>Made possible by</div>
+              <a href="http://neighbourhoodsmallgrants.ca/">
+                <Image />
+              </a>
+              <div>
+              © {new Date().getFullYear()}
+              </div>
+            </small>
+          </div>
+        </footer>
+      </div>
     )}
   />
 )
