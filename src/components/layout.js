@@ -6,6 +6,7 @@
  */
 
 import React from "react"
+import styled from "styled-components"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
@@ -13,6 +14,11 @@ import Header from "./header"
 import Image from "./image"
 import "./layout.css"
 import "./qbpb-layout.css"
+
+const MainWrapper = styled.main`
+  max-width: 600px;
+  margin: 0 auto;
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -33,9 +39,9 @@ const Layout = ({ children }) => (
       <div id="main-wrapper">
         <div className="content">
           <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
-          <main>
+          <MainWrapper>
             {children}
-          </main>
+          </MainWrapper>
         </div>
         <footer className="footer">
           <div style={{textAlign: `center`}}>
