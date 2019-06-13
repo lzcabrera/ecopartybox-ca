@@ -1,20 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Queensborough Party Box`,
+    title: `Eco Party Box`,
     description: `Kick off your next party with a set of reusable plates, cups and cutlery.`,
     author: `@gatsbyjs`,
     menuLinks:[
       {
         name:'home',
         link:'/'
-      },
-      {
-        name:'about',
-        link:'/about'
-      },
-      {
-        name:'calendar',
-        link:'/calendar'
       }
     ]
   },
