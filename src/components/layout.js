@@ -16,7 +16,7 @@ import "./layout.css"
 import "./qbpb-layout.css"
 
 const MainWrapper = styled.main`
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 `
 

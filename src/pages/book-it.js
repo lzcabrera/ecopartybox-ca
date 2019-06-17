@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Calendar from "../components/Calendar"
 
 const FormWrapper = styled.div`
   margin-top: 3rem;
@@ -25,8 +26,16 @@ const InputField = styled.div`
     margin-right: 1rem;
   }
 
-  input {
+  > input {
     flex-basis: 80%;
+    height: 48px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dbdbdb;
+  }
+
+  .DateRangePicker {
+    width:80%;
   }
 `
 
@@ -39,8 +48,11 @@ const TextField = styled.div`
     margin-right: 1rem;
   }
 
-  textarea {
+  > textarea {
     flex-basis: 80%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dbdbdb;
   }
 `
 
@@ -68,6 +80,10 @@ const BookIt = () => (
               <input type="text" name="email" id="email" />
           </InputField>
 
+          <InputField>
+            <label>Dates</label>
+            <Calendar />
+          </InputField>
           <TextField>
               <label htmlFor="message">Message</label>
               <textarea name="message" id="message" rows="6" />
