@@ -11,13 +11,32 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Image from "./image"
 import "./layout.css"
 import "./qbpb-layout.css"
+
+import fsgvLogo from "../images/Family_Services_Greater_Vancouver.png"
+import sngLogo from "../images/nsg-wordmark-2014_ladybug.png"
 
 const MainWrapper = styled.main`
   max-width: 800px;
   margin: 0 auto;
+`
+
+const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+const VFLogo = styled.a`
+  img {
+    width: 200px;
+  }
+`
+const FSLogo = styled.a`
+  padding-top: 5px;
+  img {
+    width: 110px;
+  }
 `
 
 const Layout = ({ children }) => (
@@ -46,13 +65,16 @@ const Layout = ({ children }) => (
         <footer className="footer">
           <div style={{textAlign: `center`}}>
             <small>
+              <div>© {new Date().getFullYear()}</div>
               <div>Made possible by</div>
-              <a href="http://neighbourhoodsmallgrants.ca/">
-                <Image />
-              </a>
-              <div>
-              © {new Date().getFullYear()}
-              </div>
+              <LogoWrapper>
+                <VFLogo href="http://neighbourhoodsmallgrants.ca/">
+                  <img src={sngLogo} alt="Vancouver Foundation | Small Neighbourhood Grants" />
+                </VFLogo>
+                <FSLogo href="">
+                  <img src={fsgvLogo} alt="Family Services of Greater Vancouver" />
+                </FSLogo>
+              </LogoWrapper>
             </small>
           </div>
         </footer>
