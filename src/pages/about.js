@@ -1,6 +1,6 @@
 
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
@@ -10,7 +10,7 @@ const FlexContainer = styled.div`
   display: flex;
 `
 const FlexItemLeft = styled.div`
-  margin-right: 50px;
+  margin-right: 100px;
 `
 const Red = styled.span`
   color: red;
@@ -33,9 +33,9 @@ const About = () => (
     <h1>About</h1>
     <p>The Queensborough Party Box is a set of community party dishes you can borrow for FREE for your next public or private gathering.</p>
 
-    <p>Help cut plastic waste by not buying single-use plastic dishes and book the Queensborough Party Box instead.</p>
+    <p>Help cut plastic waste by not buying single-use plastic dishes and <Link to="/book-it">book</Link> the Queensborough Party Box instead.</p>
 
-    <h2>What's included</h2>
+    <h2>What's included?</h2>
     <FlexContainer>
       <FlexItemLeft>
         <h3>For <Red>k</Red><Yellow>i</Yellow><Green>d</Green><Blue>s</Blue></h3>

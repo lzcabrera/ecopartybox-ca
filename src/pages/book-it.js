@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Calendar from "../components/Calendar"
+// import Calendar from "../components/Calendar"
 
 const FormWrapper = styled.div`
   margin-top: 3rem;
@@ -60,6 +60,8 @@ const BookIt = () => (
   <Layout>
     <SEO title="BookIt" />
       <h1>Booking Request</h1>
+      <p>Pick-up is in Queensborough at <b>11 - 188 Wood St. New Westminster, BC, V3M 0H6</b>.</p>
+      <p>Please include in your message the pick-up and drop-off dates.</p>
       <FormWrapper>
         <form name="contact"
             method="post"
@@ -80,10 +82,14 @@ const BookIt = () => (
               <input type="text" name="email" id="email" />
           </InputField>
 
-          <InputField>
-            <label>Dates</label>
-            <Calendar />
-          </InputField>
+          {
+            /*
+            <InputField>
+              <label>Dates</label>
+              <Calendar />
+            </InputField>
+            */
+          }
           <TextField>
               <label htmlFor="message">Message</label>
               <textarea name="message" id="message" rows="6" />
