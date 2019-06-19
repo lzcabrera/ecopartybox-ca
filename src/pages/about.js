@@ -13,18 +13,18 @@ const FlexItemLeft = styled.div`
   margin-right: 100px;
 `
 const Red = styled.span`
-  color: red;
+  color: #df2127;
 `
 
 const Yellow = styled.span`
-  color: #CC9F00;
+  color: #b8b437;
 `
-const Green = styled.span`
-  color: green;
+const Blue = styled.span`
+  color: #00afd9;
 `
 
-const Blue = styled.span`
-  color: blue;
+const Purple = styled.span`
+  color: #7c246e;
 `
 
 const About = () => (
@@ -33,34 +33,29 @@ const About = () => (
     <h1>About</h1>
     <p>The Queensborough Party Box is a set of community party dishes you can borrow for FREE for your next public or private gathering.</p>
 
-    <p>Help cut plastic waste by not buying single-use plastic dishes and <Link to="/book-it">book</Link> the Queensborough Party Box instead.</p>
-
     <h2>What's included?</h2>
     <FlexContainer>
       <FlexItemLeft>
-        <h3>For <Red>k</Red><Yellow>i</Yellow><Green>d</Green><Blue>s</Blue></h3>
+        <h3>For <Red>k</Red><Blue>i</Blue><Yellow>d</Yellow><Purple>s</Purple></h3>
         <ul>
           <li>24 plates</li>
           <li>24 bowls</li>
           <li>24 cups</li>
-          <li>24 forks</li>
-          <li>24 knifes</li>
-          <li>24 spoons</li>
+          <li>24 utensil sets (fork, knife, spoon)</li>
         </ul>
       </FlexItemLeft>
       <div>
         <h3>For adults</h3>
         <ul>
-          <li>20 dinner plates</li>
-          <li>20 side plates</li>
-          <li>20 glasses</li>
-          <li>20 forks</li>
-          <li>20 knifes</li>
-          <li>20 spoons</li>
+          <li>20 dinner plates (white tempered glass)</li>
+          <li>20 side plates (white tempered glass)</li>
+          <li>20 stainless steel utensil sets (forks, knife, spoon)</li>
         </ul>
       </div>
     </FlexContainer>
-    {/* <Link to="https://clarkparkpartybox.wordpress.com/">Clark Party Box</Link> */}
+    <p>In the spirit of the reduce, reuse, recycle movement and inspired by the <Link to="https://clarkparkpartybox.wordpress.com/">Clark Park Party Box</Link>,
+      let's cut plastic waste by not buying single-use plastic dishes and utensils
+      and <Link to="/book-it">book</Link> the <strong>Queensborough Party Box</strong> instead.</p>
   </Layout>
 )
 
