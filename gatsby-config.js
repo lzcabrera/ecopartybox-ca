@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Queensborough Party Box`,
-    description: `Kick off your next party with a set of reusable plates, cups and cutlery.`,
+    description: `Host your next party with a set of reusable plates, cups and cutlery.`,
     author: `@gatsbyjs`,
     menuLinks:[
       {
@@ -36,6 +36,8 @@ module.exports = {
       options: {
         type: `user-profile`,
         username: `queensboroughpartybox`,
+        access_token: "a valid access token",
+        instagram_id: "your instagram_business_account id",
       },
     },
     `gatsby-transformer-sharp`,
