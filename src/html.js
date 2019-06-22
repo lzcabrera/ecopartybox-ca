@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import AdultsSet from "./images/adult-individual.jpg"
 
 export default function HTML(props) {
   return (
@@ -11,6 +12,10 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta property="og:title" content="Queensborough Party Box" />
+        <meta property="og:description" content="a set of community party dishes you can borrow for FREE for your next public or private gathering." />
+        <meta property="og:image" content={AdultsSet} />
+        <meta property="og:url" content="https://queensborough.ecopartybox.ca" />
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Archivo+Narrow|Open+Sans+Condensed:300&display=swap" rel="stylesheet"></link>
         {props.headComponents}
       </head>

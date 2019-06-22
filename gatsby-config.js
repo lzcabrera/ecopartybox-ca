@@ -31,6 +31,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        type: `user-profile`,
+        username: `queensboroughpartybox`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
