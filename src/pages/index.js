@@ -17,7 +17,9 @@ const SidePanel = styled.div`
   /* background: red; */
   flex: 1 0 0;
   padding-left: 1rem;
+
   img{
+    width: 100%;
     border-radius: 10px;
   }
 `
